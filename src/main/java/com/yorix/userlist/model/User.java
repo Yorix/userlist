@@ -17,5 +17,14 @@ public class User {
     private String lastname;
     @Column(name = "address_id")
     private int addressId;
-//    private Address address;
+
+    public User(String firstname, String lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+
+    public User(String firstname, String lastname, int addressId) {
+        this(firstname, lastname);
+        this.addressId = addressId;
+    }
 }

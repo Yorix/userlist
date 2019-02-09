@@ -4,13 +4,12 @@ import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.Id;
 
-@Entity
-@Table(name = "address")
 @Data
+@Entity
 public class Address {
-    @Column(name = "country_id")
+    @Id
     private int countryId;
     @Column(name = "city_id")
     private int cityId;

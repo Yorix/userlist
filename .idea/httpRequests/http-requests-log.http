@@ -1,0 +1,444 @@
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-09T094740.500.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-09T093355.500.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-09T093254.500.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-09T091957.500.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-09T091249.500.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-08T092716.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-08T092639.500.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-08T092535.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-08T090946.500.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-08T090813.415.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-08T090559.415.json
+
+###
+
+GET http://localhost:8080/userinfo/get/Vasea/Pupkin
+
+<> 2019-02-08T090537.500.json
+
+###
+
+GET http://localhost:8080/userinfo/get/Vasea/Pupkin
+
+<> 2019-02-08T090316.500.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Yorix",   "lastname": "Konev",   "country": "Ukraine",   "city": "Odessa",   "street": "Dukovskaya" }
+
+<> 2019-02-08T090309.400.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Vasea",   "lastname": "Pupkin",   "country": "Ukraine",   "city": "Odessa",   "street": "Pantelemonovska" }
+
+<> 2019-02-08T090255.400.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-08T090236.415.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Yorix",   "lastname": "Konev",   "country": "Ukraine",   "city": "Odessa",   "street": "Dukovskaya" }
+
+<> 2019-02-08T085535.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Vasea",   "lastname": "Pupkin",   "country": "Ukraine",   "city": "Odessa",   "street": "Pantelemonovska" }
+
+<> 2019-02-08T085528.201.json
+
+###
+
+GET http://localhost:8080/userinfo/get/Vasea/Pupkin
+
+<> 2019-02-08T082822.400.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Yorix",   "lastname": "Konev",   "country": "Ukraine",   "city": "Odessa",   "street": "Dukovskaya" }
+
+<> 2019-02-08T082819.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Vasea",   "lastname": "Pupkin",   "country": "Ukraine",   "city": "Odessa",   "street": "Pantelemonovska" }
+
+<> 2019-02-08T082814.201.json
+
+###
+
+GET http://localhost:8080/userinfo/get/Vasea/Pupkin
+
+<> 2019-02-08T082750.500.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Yorix",   "lastname": "Konev",   "country": "Ukraine",   "city": "Odessa",   "street": "Dukovskaya" }
+
+<> 2019-02-08T082746.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Vasea",   "lastname": "Pupkin",   "country": "Ukraine",   "city": "Odessa",   "street": "Pantelemonovska" }
+
+<> 2019-02-08T082740.201.json
+
+###
+
+GET http://localhost:8080/userinfo/get/Vasea/Pupkin
+
+<> 2019-02-08T082726.500.json
+
+###
+
+GET http://localhost:8080/userinfo/get/Vasea/Pupkin
+
+<> 2019-02-08T082524.500.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Yorix",   "lastname": "Konev",   "country": "Ukraine",   "city": "Odessa",   "street": "Dukovskaya" }
+
+<> 2019-02-08T082520.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Vasea",   "lastname": "Pupkin",   "country": "Ukraine",   "city": "Odessa",   "street": "Pantelemonovska" }
+
+<> 2019-02-08T082517.201.json
+
+###
+
+GET http://localhost:8080/userinfo/get/Vasea/Pupkin
+
+<> 2019-02-08T082330.500.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Yorix",   "lastname": "Konev",   "country": "Ukraine",   "city": "Odessa",   "street": "Dukovskaya" }
+
+<> 2019-02-08T082326.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Vasea",   "lastname": "Pupkin",   "country": "Ukraine",   "city": "Odessa",   "street": "Pantelemonovska" }
+
+<> 2019-02-08T082321.201.json
+
+###
+
+GET http://localhost:8080/userinfo/get/Vasea/Pupkin
+
+<> 2019-02-04T103316.200.json
+
+###
+
+GET http://localhost:8080/userinfo/get/Vasea/Pupkin
+
+<> 2019-02-04T103258.500.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Vasea",   "lastname": "Pupkin",   "country": "Ukraine",   "city": "Odessa",   "street": "Pantelemonovska" }
+
+<> 2019-02-04T103253.201.json
+
+###
+
+GET http://localhost:8080/userinfo/get/Vasea/Pupkin
+
+<> 2019-02-04T103248.200.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Yorix",   "lastname": "Konev",   "country": "Ukraine",   "city": "Odessa",   "street": "Dukovskaya" }
+
+<> 2019-02-04T103245.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Vasea",   "lastname": "Pupkin",   "country": "Ukraine",   "city": "Odessa",   "street": "Pantelemonovska" }
+
+<> 2019-02-04T103243.201.json
+
+###
+
+GET http://localhost:8080/userinfo/get/Vasea/Pupkin
+
+<> 2019-02-04T103210.500.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Vasea",   "lastname": "Pupkin",   "country": "Ukraine",   "city": "Odessa",   "street": "Pantelemonovska" }
+
+<> 2019-02-04T103207.201.json
+
+###
+
+GET http://localhost:8080/userinfo/get/Vasea/Pupkin
+
+<> 2019-02-04T103203.200.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Yorix",   "lastname": "Konev",   "country": "Ukraine",   "city": "Odessa",   "street": "Dukovskaya" }
+
+<> 2019-02-04T103159.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Vasea",   "lastname": "Pupkin",   "country": "Ukraine",   "city": "Odessa",   "street": "Pantelemonovska" }
+
+<> 2019-02-04T103156.201.json
+
+###
+
+GET http://localhost:8080/userinfo/get/Vasea/Pupkin
+
+<> 2019-02-04T103121.200.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Yorix",   "lastname": "Konev",   "country": "Ukraine",   "city": "Odessa",   "street": "Dukovskaya" }
+
+<> 2019-02-04T103118.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Vasea",   "lastname": "Pupkin",   "country": "Ukraine",   "city": "Odessa",   "street": "Pantelemonovska" }
+
+<> 2019-02-04T103115.201.json
+
+###
+
+GET http://localhost:8080/userinfo/get/Vasea/Pupkin
+
+<> 2019-02-04T102521.200.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Vasea",   "lastname": "Pupkin",   "country": "Ukraine",   "city": "Odessa",   "street": "Pantelemonovska" }
+
+<> 2019-02-04T102510.201.json
+
+###
+
+GET http://localhost:8080/userinfo/get/Vasea/Pupkin
+
+<> 2019-02-04T102505.500.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "firstname": "Yorix",   "lastname": "Konev",   "country": "Ukraine",   "city": "Odessa",   "street": "Dukovskaya" }
+
+<> 2019-02-04T102501.201.json
+
+###
+

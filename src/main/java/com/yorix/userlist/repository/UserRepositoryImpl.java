@@ -19,8 +19,8 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public void create(User user) {
-        String sql = "INSERT userlist.user (firstname, lastname, address_id) VALUES (?, ?, ?)";
-        jdbcTemplate.update(sql, user.getFirstname(), user.getLastname(), user.getAddressId());
+        String sql = "INSERT INTO userlist.user (firstname, lastname, address_id) VALUES (?, ?, ?)";
+        jdbcTemplate.update(sql, user.getFirstname(), user.getLastname()); //todo
     }
 
     @Override
