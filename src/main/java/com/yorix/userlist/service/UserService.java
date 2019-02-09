@@ -1,9 +1,10 @@
 package com.yorix.userlist.service;
 
 import com.yorix.userlist.model.User;
+import org.springframework.http.ResponseEntity;
 
 public interface UserService {
-    void create(User user);
+    ResponseEntity create(String request);
 
     User searh(String firstname, String lastname);
 }

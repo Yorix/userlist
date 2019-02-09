@@ -11,15 +11,15 @@ CREATE TABLE IF NOT EXISTS user
   id         INT AUTO_INCREMENT PRIMARY KEY,
   firstname  VARCHAR(50) NOT NULL,
   lastname   VARCHAR(50) NOT NULL,
-  address_id INT NOT NULL /*UNIQUE*/
+  address_id INT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS address
 (
   id         INT AUTO_INCREMENT PRIMARY KEY,
-  country_id INT NOT NULL UNIQUE,
-  city_id    INT NOT NULL UNIQUE,
-  street_id  INT NOT NULL UNIQUE
+  country_id INT NOT NULL,
+  city_id    INT NOT NULL,
+  street_id  INT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS country

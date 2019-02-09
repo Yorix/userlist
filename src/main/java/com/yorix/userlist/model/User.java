@@ -17,5 +17,4 @@ public class User {
     private String lastname;
     @Column(name = "address_id")
     private int addressId;
-//    private Address address;
 }
