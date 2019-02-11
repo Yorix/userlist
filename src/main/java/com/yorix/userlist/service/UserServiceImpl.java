@@ -64,6 +64,9 @@ public class UserServiceImpl implements UserService {
         user = new User();
         user.setFirstname(firstname);
         user.setLastname(lastname);
+        user.setAddressId(addressId);
+
+        userDao.createUser(user);
         return ResponseEntity.status(201).body(String.format(created, firstname, lastname));
     }
 

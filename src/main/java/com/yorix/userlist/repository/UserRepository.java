@@ -21,7 +21,7 @@ public class UserRepository implements UserDao {
     @Override
     public void createUser(User user) {
         String sql = "INSERT INTO user (firstname, lastname, address_id) VALUES (?, ?, ?)";
-        jdbcTemplate.update(sql, user.getFirstname(), user.getLastname()); //todo
+        jdbcTemplate.update(sql, user.getFirstname(), user.getLastname(), user.getAddressId()); //todo
     }
 
     @Override
@@ -36,8 +36,8 @@ public class UserRepository implements UserDao {
     //TODO
     @Override
     public int getAddressId(Integer... args) {
-        String sql = "SELECT * FROM address WHERE country_id = ? AND city_id = ? AND street_id = ?";
-        List<Address> addresses = jdbcTemplate.queryForList(sql, args, Address.class);
+        String sql = "SELECT * FROM `address` WHERE `country_id` = ? AND `city_id` = ? AND `street_id` = ?";
+        List<Address> addresses = jdbcTemplate.query(sql, args, new AddressRowMapper());
         if (addresses.size() == 1) {
             return addresses.get(0).getId();
         } else return -1;
