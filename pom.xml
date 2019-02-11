@@ -48,11 +48,6 @@
             <artifactId>spring-jdbc</artifactId>
             <version>5.1.4.RELEASE</version>
         </dependency>
-        <dependency>
-            <groupId>com.vaadin.external.google</groupId>
-            <artifactId>android-json</artifactId>
-            <version>0.0.20131108.vaadin1</version>
-        </dependency>
     </dependencies>
 
     <build>

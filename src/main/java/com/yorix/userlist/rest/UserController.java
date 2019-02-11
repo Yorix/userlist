@@ -26,7 +26,7 @@ public class UserController {
 
     @GetMapping(value = "get/{firstname}/{lastname}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<User> get(@PathVariable("firstname") String firstname, @PathVariable("lastname") String lastname) {
-        User user = userService.searh(firstname, lastname);
+        User user = userService.getUser(firstname, lastname);
         return ResponseEntity.status(HttpStatus.OK).body(user);
     }
 }

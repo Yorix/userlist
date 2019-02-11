@@ -15,7 +15,7 @@ VALUES ('Odessa'),
        ('Naples');
 
 INSERT INTO street(name)
-VALUES ('Balkovskaya'),
+VALUES ('Pantelemonovska'),
        ('Domstrasse'),
        ('Lubelska'),
        ('Basse des Tanneurs'),

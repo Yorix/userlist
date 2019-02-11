@@ -1,0 +1,7 @@
+{
+  "timestamp": "2019-02-11T14:50:34.994+0000",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "Incorrect column count: expected 1, actual 4",
+  "path": "/userinfo/add"
+}

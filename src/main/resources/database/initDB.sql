@@ -1,6 +1,6 @@
 CREATE USER IF NOT EXISTS 'admin'@'localhost' IDENTIFIED BY 'admin';
-# GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';
-# FLUSH PRIVILEGES;
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';
+FLUSH PRIVILEGES;
 
 DROP SCHEMA IF EXISTS userlist;
 CREATE SCHEMA IF NOT EXISTS userlist;
