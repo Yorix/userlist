@@ -6,6 +6,8 @@ import com.yorix.userlist.model.User;
 import com.yorix.userlist.repository.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +23,7 @@ public class UserServiceImpl implements UserService {
     private String alreadyExists;
 
     private final UserDao userDao;
+    private HttpHeaders headers;
 
     @Autowired
     public UserServiceImpl(UserDao userDao) {
@@ -30,7 +33,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public ResponseEntity create(String request) {
-        JsonNode jsonNode;
+        headers = new HttpHeaders();
         String firstname = "";
         String lastname = "";
         String country = "";
@@ -38,7 +41,7 @@ public class UserServiceImpl implements UserService {
         String street = "";
 
         try {
-            jsonNode = new ObjectMapper().readValue(request, JsonNode.class);
+            JsonNode jsonNode = new ObjectMapper().readValue(request, JsonNode.class);
             firstname = jsonNode.get("firstname").textValue();
             lastname = jsonNode.get("lastname").textValue();
             country = jsonNode.get("country").textValue();
@@ -54,20 +57,28 @@ public class UserServiceImpl implements UserService {
 
         int addressId = userDao.getAddressId(countryId, cityId, streetId);
         if (addressId == -1) {
-            return ResponseEntity.status(406).body(String.format(invalidAddress, country, city, street));
+            headers.add("status", "406");
+            headers.add("message", String.format(invalidAddress, country, city, street));
+            return new ResponseEntity(headers, HttpStatus.NOT_ACCEPTABLE);
         }
 
         User user = userDao.getUser(firstname, lastname);
         if (user != null) {
-            return ResponseEntity.status(204).body(String.format(alreadyExists, firstname, lastname));
+            headers.add("status", "204");
+            headers.add("message", String.format(alreadyExists, firstname, lastname));
+            return new ResponseEntity(headers, HttpStatus.NO_CONTENT);
         }
+
         user = new User();
         user.setFirstname(firstname);
         user.setLastname(lastname);
         user.setAddressId(addressId);
 
         userDao.createUser(user);
-        return ResponseEntity.status(201).body(String.format(created, firstname, lastname));
+
+        headers.add("status", "201");
+        headers.add("message", String.format(created, firstname, lastname));
+        return new ResponseEntity(headers, HttpStatus.CREATED);
     }
 
     @Override

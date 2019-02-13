@@ -3,6 +3,7 @@ package com.yorix.userlist.repository;
 import com.yorix.userlist.model.Address;
 import com.yorix.userlist.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -20,14 +21,14 @@ public class UserRepository implements UserDao {
 
     @Override
     public void createUser(User user) {
-        String sql = "INSERT INTO user (firstname, lastname, address_id) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO `user` (`firstname`, `lastname`, `address_id`) VALUES (?, ?, ?)";
         jdbcTemplate.update(sql, user.getFirstname(), user.getLastname(), user.getAddressId()); //todo
     }
 
     @Override
     public User getUser(String... args) {
-        String sql = "SELECT * FROM user WHERE firstname = ? AND lastname = ?";
-        List<User> users = jdbcTemplate.queryForList(sql, args, User.class);
+        String sql = "SELECT * FROM `user` WHERE `firstname` = ? AND `lastname` = ?";
+        List<User> users = jdbcTemplate.query(sql, args, new BeanPropertyRowMapper<>(User.class));
         if (users.size() == 1) {
             return users.get(0);
         } else return null;
@@ -37,7 +38,7 @@ public class UserRepository implements UserDao {
     @Override
     public int getAddressId(Integer... args) {
         String sql = "SELECT * FROM `address` WHERE `country_id` = ? AND `city_id` = ? AND `street_id` = ?";
-        List<Address> addresses = jdbcTemplate.query(sql, args, new AddressRowMapper());
+        List<Address> addresses = jdbcTemplate.query(sql, args, new BeanPropertyRowMapper<>(Address.class));
         if (addresses.size() == 1) {
             return addresses.get(0).getId();
         } else return -1;
