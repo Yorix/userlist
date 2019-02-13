@@ -21,9 +21,11 @@ public class UserServiceImpl implements UserService {
     private String invalidAddress;
     @Value("${already-exists}")
     private String alreadyExists;
+    @Value("${doesnt-exist}")
+    private String doesntExist;
+
 
     private final UserDao userDao;
-    private HttpHeaders headers;
 
     @Autowired
     public UserServiceImpl(UserDao userDao) {
@@ -32,8 +34,8 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public ResponseEntity create(String request) {
-        headers = new HttpHeaders();
+    public ResponseEntity<String> create(String request) {
+        HttpHeaders headers = new HttpHeaders();
         String firstname = "";
         String lastname = "";
         String country = "";
@@ -48,7 +50,7 @@ public class UserServiceImpl implements UserService {
             city = jsonNode.get("city").textValue();
             street = jsonNode.get("street").textValue();
         } catch (IOException e) {
-            e.printStackTrace(); //todo
+            e.printStackTrace();
         }
 
         int countryId = userDao.getAddressElementId("country", country);
@@ -59,14 +61,16 @@ public class UserServiceImpl implements UserService {
         if (addressId == -1) {
             headers.add("status", "406");
             headers.add("message", String.format(invalidAddress, country, city, street));
-            return new ResponseEntity(headers, HttpStatus.NOT_ACCEPTABLE);
+            String body = String.format(
+                    "{\"status\": 406, \"message\": " + doesntExist + "}", country, city, street);
+            return new ResponseEntity<>(body, headers, HttpStatus.NOT_ACCEPTABLE);
         }
 
         User user = userDao.getUser(firstname, lastname);
         if (user != null) {
             headers.add("status", "204");
             headers.add("message", String.format(alreadyExists, firstname, lastname));
-            return new ResponseEntity(headers, HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(headers, HttpStatus.NO_CONTENT);
         }
 
         user = new User();
@@ -78,11 +82,29 @@ public class UserServiceImpl implements UserService {
 
         headers.add("status", "201");
         headers.add("message", String.format(created, firstname, lastname));
-        return new ResponseEntity(headers, HttpStatus.CREATED);
+        String body = String.format(
+                "{\"status\": 201, \"message\": " + created + "}", firstname, lastname);
+        return new ResponseEntity<>(body, headers, HttpStatus.CREATED);
     }
 
     @Override
-    public User getUser(String firstname, String lastname) {
-        return userDao.getUser(firstname, lastname);
+    public ResponseEntity<String> getUser(String firstname, String lastname) {
+        HttpHeaders headers = new HttpHeaders();
+        User user = userDao.getUser(firstname, lastname);
+
+        if (user == null) {
+            headers.add("status", "204");
+            headers.add("message", String.format(doesntExist, firstname, lastname));
+            return new ResponseEntity<>(headers, HttpStatus.NO_CONTENT);
+        }
+
+        // TODO create and implement AddressDao interface
+        String country = "";
+        String city = "";
+        String street = "";
+
+        headers.add("status", "200");
+        String body = String.format("{\"status\": 200, \"firstname\": }");
+        return new ResponseEntity<>(body, headers, HttpStatus.NO_CONTENT);
     }
 }

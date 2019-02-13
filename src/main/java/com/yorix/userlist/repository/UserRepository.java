@@ -21,23 +21,22 @@ public class UserRepository implements UserDao {
 
     @Override
     public void createUser(User user) {
-        String sql = "INSERT INTO `user` (`firstname`, `lastname`, `address_id`) VALUES (?, ?, ?)";
-        jdbcTemplate.update(sql, user.getFirstname(), user.getLastname(), user.getAddressId()); //todo
+        String sql = "INSERT INTO `userlist`.`user` (`firstname`, `lastname`, `address_id`) VALUES (?, ?, ?)";
+        jdbcTemplate.update(sql, user.getFirstname(), user.getLastname(), user.getAddressId());
     }
 
     @Override
     public User getUser(String... args) {
-        String sql = "SELECT * FROM `user` WHERE `firstname` = ? AND `lastname` = ?";
+        String sql = "SELECT * FROM `userlist`.`user` WHERE `firstname` = ? AND `lastname` = ?";
         List<User> users = jdbcTemplate.query(sql, args, new BeanPropertyRowMapper<>(User.class));
         if (users.size() == 1) {
             return users.get(0);
         } else return null;
     }
 
-    //TODO
     @Override
     public int getAddressId(Integer... args) {
-        String sql = "SELECT * FROM `address` WHERE `country_id` = ? AND `city_id` = ? AND `street_id` = ?";
+        String sql = "SELECT * FROM `userlist`.`address` WHERE `country_id` = ? AND `city_id` = ? AND `street_id` = ?";
         List<Address> addresses = jdbcTemplate.query(sql, args, new BeanPropertyRowMapper<>(Address.class));
         if (addresses.size() == 1) {
             return addresses.get(0).getId();

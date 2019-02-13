@@ -1,4 +1,131 @@
 POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea1", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-13T081944.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea1", "lastname": "Pupkin", "country": "Ukraine1", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-13T081934.406.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Yorix", "lastname": "Konev", "country": "France", "city": "Amiens", "street": "Basse des Tanneurs"}
+
+<> 2019-02-13T081908.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-13T081903.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Yorix", "lastname": "Konev", "country": "France", "city": "Amiens", "street": "Basse des Tanneurs"}
+
+<> 2019-02-13T074430.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-13T074419.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Yorix1", "lastname": "Konev", "country": "France", "city": "Amiens", "street": "Basse des Tanneurs"}
+
+<> 2019-02-13T063639.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Yorix1", "lastname": "Konev", "country": "France", "city": "Amiens", "street": "1Basse des Tanneurs"}
+
+<> 2019-02-13T063620.406.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Yorix", "lastname": "Konev", "country": "France", "city": "Amiens", "street": "Basse des Tanneurs"}
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Yorix", "lastname": "Konev", "country": "France", "city": "Amiens", "street": "Basse des Tanneurs"}
+
+<> 2019-02-13T063544.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-13T063540.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+<> 2019-02-13T063336.201.json
+
+###
+
+POST http://localhost:8080/userinfo/add
+Content-Type: application/json
+
+{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
+
+###
+
+POST http://localhost:8080/userinfo/add
 Accept: */*
 Cache-Control: no-cache
 
@@ -323,144 +450,6 @@ Accept: */*
 Cache-Control: no-cache
 
 {"firstname":"Yorix", "lastname": "Konev", "country": "Germany", "city": "Hamburg", "street": "Domstrasse"}
-
-###
-
-POST http://localhost:8080/userinfo/add
-Accept: */*
-Cache-Control: no-cache
-
-{"firstname":"Yorix", "lastname": "Konev", "country": "Germany", "city": "Hamburg", "street": "Domstrasse"}
-
-<> 2019-02-13T041335.201.json
-
-###
-
-POST http://localhost:8080/userinfo/add
-Accept: */*
-Cache-Control: no-cache
-
-{"firstname":"Yorix", "lastname": "Konev", "country": "Germany", "city": "Hamburg", "street": "Domstrasse"}
-
-<> 2019-02-13T041243.406.json
-
-###
-
-POST http://localhost:8080/userinfo/add
-Accept: */*
-Cache-Control: no-cache
-
-{"firstname":"Yorix", "lastname": "Konev", "country": "Germany", "city": "Hamburg", "street": "Domstrasse"}
-
-<> 2019-02-13T041241.201.json
-
-###
-
-POST http://localhost:8080/userinfo/add
-Accept: */*
-Cache-Control: no-cache
-
-{"firstname":"Yorix", "lastname": "Konev", "country": "Germany", "city": "Hamburg", "street": "Domstrasse"}
-
-###
-
-POST http://localhost:8080/userinfo/add
-Accept: */*
-Cache-Control: no-cache
-
-{"firstname":"Yorix", "lastname": "Konev", "country": "Germany", "city": "Hamburg", "street": "Domstrasse"}
-
-<> 2019-02-13T041128.201.json
-
-###
-
-POST http://localhost:8080/userinfo/add
-Accept: */*
-Cache-Control: no-cache
-
-{"firstname":"Yorix", "lastname": "Konev", "country": "Germany", "city": "Hamburg", "street": "Domstrasse"}
-
-###
-
-POST http://localhost:8080/userinfo/add
-Accept: */*
-Cache-Control: no-cache
-
-{"firstname":"Yorix", "lastname": "Konev", "country": "Germany", "city": "Hamburg", "street": "Domstrasse"}
-
-<> 2019-02-13T040748.201.json
-
-###
-
-POST http://localhost:8080/userinfo/add
-Accept: */*
-Cache-Control: no-cache
-
-{"firstname":"Yorix", "lastname": "Konev", "country": "Germany", "city": "Hamburg", "street": "Domstrasse"}
-
-###
-
-POST http://localhost:8080/userinfo/add
-Accept: */*
-Cache-Control: no-cache
-
-{"firstname":"Yorix", "lastname": "Konev", "country": "Germany", "city": "Hamburg", "street": "Domstrasse"}
-
-<> 2019-02-13T040707.201.json
-
-###
-
-POST http://localhost:8080/userinfo/add
-Accept: */*
-Cache-Control: no-cache
-
-{"firstname":"Yorix", "lastname": "Konev", "country": "Germany", "city": "Hamburg", "street": "Domstrasse"}
-
-###
-
-POST http://localhost:8080/userinfo/add
-Accept: */*
-Cache-Control: no-cache
-
-{"firstname":"Yorix", "lastname": "Konev", "country": "Germany", "city": "Hamburg", "street": "Domstrasse"}
-
-<> 2019-02-13T040618.201.json
-
-###
-
-POST http://localhost:8080/userinfo/add
-Accept: */*
-Cache-Control: no-cache
-
-{"firstname":"Yorix", "lastname": "Konev", "country": "Germany", "city": "Hamburg", "street": "Domstrasse"}
-
-###
-
-POST http://localhost:8080/userinfo/add
-Accept: */*
-Cache-Control: no-cache
-
-{"firstname":"Vasea", "lastname": "Pupkin", "country": "Ukraine", "city": "Odessa", "street": "Pantelemonovska"}
-
-<> 2019-02-13T040334.201.json
-
-###
-
-POST http://localhost:8080/userinfo/add
-Accept: */*
-Cache-Control: no-cache
-
-{"firstname":"Yorix", "lastname": "Konev", "country": "Germany", "city": "Hamburg", "street": "Domstrasse"}
-
-###
-
-POST http://localhost:8080/userinfo/add
-Accept: */*
-Cache-Control: no-cache
-
-{"firstname":"Yorix", "lastname": "Konev", "country": "Germany", "city": "Hamburg", "street": "Domstrasse"}
-
-<> 2019-02-13T040322.201.json
 
 ###
 
