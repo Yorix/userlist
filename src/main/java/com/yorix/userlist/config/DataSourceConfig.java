@@ -26,6 +26,5 @@ public class DataSourceConfig {
         dataSource.setUsername(username);
         dataSource.setPassword(password);
         return dataSource;
-
     }
 }

@@ -2,7 +2,9 @@ package com.yorix.userlist.service;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.yorix.userlist.model.Address;
 import com.yorix.userlist.model.User;
+import com.yorix.userlist.repository.AddressDao;
 import com.yorix.userlist.repository.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,21 +17,23 @@ import java.io.IOException;
 
 @Service
 public class UserServiceImpl implements UserService {
-    @Value("${created}")
+    @Value("${user-created}")
     private String created;
     @Value("${invalid-address}")
     private String invalidAddress;
-    @Value("${already-exists}")
+    @Value("${user-already-exists}")
     private String alreadyExists;
-    @Value("${doesnt-exist}")
-    private String doesntExist;
+    @Value("${user-doesnt-exist}")
+    private String userDoesntExist;
 
 
     private final UserDao userDao;
+    private final AddressDao addressDao;
 
     @Autowired
-    public UserServiceImpl(UserDao userDao) {
+    public UserServiceImpl(UserDao userDao, AddressDao addressDao) {
         this.userDao = userDao;
+        this.addressDao = addressDao;
     }
 
 
@@ -53,18 +57,19 @@ public class UserServiceImpl implements UserService {
             e.printStackTrace();
         }
 
-        int countryId = userDao.getAddressElementId("country", country);
-        int cityId = userDao.getAddressElementId("city", city);
-        int streetId = userDao.getAddressElementId("street", street);
+        int countryId = addressDao.getAddressElementId("country", country);
+        int cityId = addressDao.getAddressElementId("city", city);
+        int streetId = addressDao.getAddressElementId("street", street);
 
-        int addressId = userDao.getAddressId(countryId, cityId, streetId);
-        if (addressId == -1) {
+        Address address = addressDao.getAddress(countryId, cityId, streetId);
+        if (address == null) {
             headers.add("status", "406");
             headers.add("message", String.format(invalidAddress, country, city, street));
             String body = String.format(
-                    "{\"status\": 406, \"message\": " + doesntExist + "}", country, city, street);
+                    "{\"status\": 406, \"message\": " + invalidAddress + "}", country, city, street);
             return new ResponseEntity<>(body, headers, HttpStatus.NOT_ACCEPTABLE);
         }
+        int addressId = address.getId();
 
         User user = userDao.getUser(firstname, lastname);
         if (user != null) {
@@ -90,21 +95,34 @@ public class UserServiceImpl implements UserService {
     @Override
     public ResponseEntity<String> getUser(String firstname, String lastname) {
         HttpHeaders headers = new HttpHeaders();
+
         User user = userDao.getUser(firstname, lastname);
 
         if (user == null) {
             headers.add("status", "204");
-            headers.add("message", String.format(doesntExist, firstname, lastname));
+            headers.add("message", String.format(userDoesntExist, firstname, lastname));
             return new ResponseEntity<>(headers, HttpStatus.NO_CONTENT);
         }
 
-        // TODO create and implement AddressDao interface
-        String country = "";
-        String city = "";
-        String street = "";
+        firstname = user.getFirstname();
+        lastname = user.getLastname();
+        Address address = addressDao.getAddressById(user.getAddressId());
+        String country = addressDao.getElementValue("country", address.getCountryId());
+        String city = addressDao.getElementValue("city", address.getCityId());
+        String street = addressDao.getElementValue("street", address.getStreetId());
+
 
         headers.add("status", "200");
-        String body = String.format("{\"status\": 200, \"firstname\": }");
-        return new ResponseEntity<>(body, headers, HttpStatus.NO_CONTENT);
+        headers.add("firstname", firstname);
+        headers.add("lastname", lastname);
+        headers.add("country", country);
+        headers.add("city", city);
+        headers.add("street", street);
+        String body = String.format(
+                "{\"status\": 200, \"firstname\":\"%s\", \"lastname\": \"%s\", " +
+                        "\"country\": \"%s\", \"city\": \"%s\", \"street\": \"%s\"}",
+                firstname, lastname, country, city, street
+        );
+        return new ResponseEntity<>(body, headers, HttpStatus.OK);
     }
 }
